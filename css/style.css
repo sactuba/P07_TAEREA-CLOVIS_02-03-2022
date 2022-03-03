@@ -1,6 +1,8 @@
 body {
-  margin: 0 100px;
+  margin: 0 50px;
 }
+
+/* HEADER */
 
 h1 {
   color: #d04f4f;
@@ -20,9 +22,7 @@ h1 {
   margin-bottom: 30px;
 }
 
-.desc_card {
-  display: flex;
-}
+/* NAV */
 
 #ingredients {
   background-color: #3282f7;
@@ -49,4 +49,58 @@ h1 {
 
 #ustensils::placeholder {
   color: #fff;
+}
+
+/* MAIN  AND RECIPE CARD*/
+
+.card__desc {
+  display: flex;
+}
+
+#card__image {
+  height: 180px;
+  background-color: #c7bebe;
+}
+
+.card__desc {
+  margin: 10px;
+}
+
+.card-title {
+  font-family: Lato;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.card-timer {
+  align-self: end;
+  font-family: Lato;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 22px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.card-preparation {
+  width: 50%;
+}
+
+.card-ingredients {
+  width: 50%;
+}
+
+.card-text {
+  font-family: Roboto;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 12px;
+  letter-spacing: 0em;
+  text-align: left;
 }
