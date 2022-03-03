@@ -1,5 +1,5 @@
 body {
-  margin: 100px 100px;
+  margin: 0 100px;
 }
 
 h1 {
@@ -11,4 +11,42 @@ h1 {
   line-height: 47px;
   letter-spacing: 0em;
   text-align: center;
+}
+
+.filter {
+  display: flex;
+  column-gap: 10%;
+  width: 50%;
+  margin-bottom: 30px;
+}
+
+.desc_card {
+  display: flex;
+}
+
+#ingredients {
+  background-color: #3282f7;
+  color: #fff;
+}
+
+#ingredients::placeholder {
+  color: #fff;
+}
+
+#appareils {
+  background-color: #68d9a4;
+  color: #fff;
+}
+
+#appareils::placeholder {
+  color: #fff;
+}
+
+#ustensils {
+  background: #ed6454;
+  color: #fff;
+}
+
+#ustensils::placeholder {
+  color: #fff;
 }
