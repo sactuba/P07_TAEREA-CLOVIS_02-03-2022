@@ -3,6 +3,10 @@ body {
 }
 
 /* HEADER */
+.fa-hat-chef {
+  color: #d04f4f;
+  font-size: 100px;
+}
 
 h1 {
   color: #d04f4f;
