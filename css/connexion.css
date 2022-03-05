@@ -6,7 +6,7 @@ main {
   margin-top: 50px;
 }
 
-#form-inscription {
+#form-conexion {
   display: flex;
   flex-direction: column;
   border: 3px solid #ed6454;
@@ -14,7 +14,7 @@ main {
   align-items: center;
 }
 
-#form-inscription div {
+#form-connexion div {
   margin: 15px 0;
 }
 

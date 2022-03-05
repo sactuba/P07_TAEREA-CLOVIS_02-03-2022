@@ -7,8 +7,8 @@
       integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="css/inscription.css" />
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/inscription.css" />
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -24,7 +24,7 @@
         method="POST"
         name="form"
         class="col g-3 needs-validation"
-        id="form"
+        id="form-inscription"
         novalidate
       >
         <div class="col-md-6">
@@ -54,7 +54,7 @@
         <div class="col-md-6">
           <label for="input-mail" class="form-label">Adresse mail</label>
           <input
-            type="mail"
+            type="email"
             name="mail"
             class="form-control"
             id="input-mail"
@@ -64,35 +64,38 @@
           <div class="valid-feedback">Looks good!</div>
         </div>
         <div class="col-md-6">
-          <label for="input-password" class="form-label">Mot de passe</label>
+          <label for="input-mdp" class="form-label">Mot de passe</label>
           <input
             type="password"
             name="mdp"
             class="form-control"
-            id="input-password"
+            id="input-mdp"
             required
           />
           <div class="invalid-feedback">Please provide a valid city.</div>
         </div>
         <div class="col-md-6">
-          <label for="input-passwordConfirmation" class="form-label"
+          <label for="input-mdpConfirmation" class="form-label"
             >Confirmer le mot de passe</label
           >
           <input
             type="password"
             name="mdp-confirmation"
             class="form-control"
-            id="input-passwordConfirmation"
+            id="input-mdpConfirmation"
             value=""
             required
           />
           <div class="valid-feedback">Looks good!</div>
         </div>
         <div class="col-6">
-          <button class="btn btn-primary" type="submit">Confirmer</button>
+          <button class="btn btn-primary" type="reset">reset</button>
+          <button class="btn btn-primary" type="submit" onclick="submitForm()">
+            Confirmer
+          </button>
         </div>
       </form>
     </main>
-    <script src="/scripts/inscription.js"></script>
+    <script src="scripts/inscription.js"></script>
   </body>
 </html>
