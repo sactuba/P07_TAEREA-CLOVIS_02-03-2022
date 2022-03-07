@@ -18,7 +18,7 @@
         //console.log(recipes[i]);
          const card = `<div class="col">
           <div class="card h-100">
-            <img src="..." id="card__image" class="card-img-top" alt="..." />
+            <img src="" id="card__image" class="card-img-top" alt="..." />
             <div class="card__desc">
             <div class="card-ingredients">
             <h5 class="card-title">${recipes[i].name}</h5>
