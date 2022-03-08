@@ -28,6 +28,10 @@ h1 {
 
 /* NAV AND FILTER*/
 
+.search-iput {
+  background-color: #e7e7e7;
+}
+
 .search-icone {
   position: relative;
   font-size: 28px;
@@ -36,9 +40,14 @@ h1 {
   left: -50px;
 }
 
+#ingredients,
+#appareils,
+#ustensils {
+  color: #fff;
+}
+
 #ingredients {
   background-color: #3282f7;
-  color: #fff;
 }
 
 #ingredients::placeholder {
@@ -47,7 +56,6 @@ h1 {
 
 #appareils {
   background-color: #68d9a4;
-  color: #fff;
 }
 
 #appareils::placeholder {
@@ -56,7 +64,6 @@ h1 {
 
 #ustensils {
   background: #ed6454;
-  color: #fff;
 }
 
 #ustensils::placeholder {
@@ -68,9 +75,14 @@ h1 {
   height: 80px;
 }
 
+.btn-filter {
+  border: none;
+  background-color: #3282f7;
+}
+
 .arrow-filter {
-  font-size: 22px;
   position: absolute;
+  font-size: 22px;
   right: 10px;
   align-self: center;
   color: #fff;
@@ -85,20 +97,23 @@ h1 {
 
 .h-100 {
   height: 300px !important;
+  background-color: #e7e7e7;
 }
 
 .card__desc {
   display: flex;
+  background-color: #e7e7e7;
 }
 
 #card__image {
-  height: 180px;
+  height: 130px;
   background-color: #c7bebe;
 }
 
 .card__desc {
-  margin: 10px;
   height: 50%;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .card-title {
@@ -143,7 +158,4 @@ h1 {
 
 .desc-preparation,
 .desc-ingrdients {
-  height: 76%;
-  overflow: hidden;
-  text-overflow: ellipsis;
 }
