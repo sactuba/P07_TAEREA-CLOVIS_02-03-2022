@@ -40,33 +40,33 @@ h1 {
   left: -50px;
 }
 
-#ingredients,
-#appareils,
-#ustensils {
+#ingredients-input,
+#appareils-input,
+#ustensils-input {
   color: #fff;
 }
 
-#ingredients {
+#ingredients-input {
   background-color: #3282f7;
 }
 
-#ingredients::placeholder {
+#ingredients-input::placeholder {
   color: #fff;
 }
 
-#appareils {
+#appareils-input {
   background-color: #68d9a4;
 }
 
-#appareils::placeholder {
+#appareils-input::placeholder {
   color: #fff;
 }
 
-#ustensils {
+#ustensils-input {
   background: #ed6454;
 }
 
-#ustensils::placeholder {
+#ustensils-input::placeholder {
   color: #fff;
 }
 
@@ -156,6 +156,6 @@ h1 {
   align-self: end;
 }
 
-.desc-preparation,
-.desc-ingrdients {
+.liste-ingredients {
+  list-style: none;
 }
