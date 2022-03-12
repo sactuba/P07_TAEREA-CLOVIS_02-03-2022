@@ -52,3 +52,29 @@ async function recipesCard() {
   }
 }
 recipesCard();
+
+function filterBy() {
+  const cardSearch = document.getElementsByClassName("card-search");
+  const displayIng = document.getElementsByClassName("display-ing");
+  console.log(displayIng);
+  const liste = document.createElement("ul");
+
+  displayIng.innerHTML = liste;
+
+  const ingredientInput = document.getElementById("ingredients-input").value;
+  const appareilsInput = document.getElementById("appareils-input").value;
+  const ustensilsInput = document.getElementById("ustensils-input").value;
+
+  for (let i = 0; i < recipes.length; i++) {
+    for (let index = 0; index < recipes[i].ingredients.length; index++) {
+      const ing = recipes[i].ingredients[index].ingredient;
+      const ingredientsDropDown = `
+       <li>${ing}</li>
+       `;
+      liste.innerHTML += ingredientsDropDown;
+      //console.log(ingredientsDropDown);
+    }
+  }
+}
+
+filterBy();
