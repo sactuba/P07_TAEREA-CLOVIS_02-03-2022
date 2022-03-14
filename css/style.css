@@ -22,7 +22,6 @@ h1 {
 .filter {
   display: flex;
   column-gap: 10%;
-  width: 50%;
   margin-bottom: 30px;
 }
 
@@ -91,6 +90,18 @@ h1 {
 .arrow-filter:active {
   transform: rotate(0.5turn);
   transition: 0.2s;
+}
+
+.dropdown-liste {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  list-style: none;
+  width: 400px;
+  background-color: #3282f7;
+  color: #fff;
+}
+
+.ing-liste {
 }
 
 /* MAIN  AND RECIPE CARD*/

@@ -55,24 +55,31 @@ recipesCard();
 
 function filterBy() {
   const cardSearch = document.getElementsByClassName("card-search");
-  const displayIng = document.getElementsByClassName("display-ing");
+  const displayIng = document.getElementById("display-ing");
   console.log(displayIng);
   const liste = document.createElement("ul");
+  liste.classList.add("dropdown-liste");
 
-  displayIng.innerHTML = liste;
+  displayIng.appendChild(liste);
 
   const ingredientInput = document.getElementById("ingredients-input").value;
   const appareilsInput = document.getElementById("appareils-input").value;
   const ustensilsInput = document.getElementById("ustensils-input").value;
 
+  let test3 = [];
+  console.log(test3);
   for (let i = 0; i < recipes.length; i++) {
     for (let index = 0; index < recipes[i].ingredients.length; index++) {
       const ing = recipes[i].ingredients[index].ingredient;
+      let test7 = [].push(ing);
+      console.log(test7);
+      const test = new Set(ing);
+
       const ingredientsDropDown = `
-       <li>${ing}</li>
+       <li class="ing-liste">${test2}</li>
        `;
       liste.innerHTML += ingredientsDropDown;
-      //console.log(ingredientsDropDown);
+      //console.log(new Set(ing));
     }
   }
 }
