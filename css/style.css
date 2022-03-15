@@ -24,7 +24,7 @@ h1 {
   display: grid;
   grid-template-areas:
     "header header header"
-    "body body body";
+    "body1 body2 body3";
   column-gap: 10%;
   margin-right: 80px;
 }
@@ -108,13 +108,10 @@ nav {
 }
 
 .liste-ing {
-  display: none;
 }
 .liste-appareils {
-  display: none;
 }
 .liste-ustensils {
-  display: none;
 }
 
 /* MAIN  AND RECIPE CARD*/
