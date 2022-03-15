@@ -20,13 +20,19 @@ h1 {
 }
 
 .filter {
-  display: flex;
+  width: 60%;
+  display: grid;
+  grid-template-areas:
+    "header header header"
+    "body body body";
   column-gap: 10%;
-  margin-bottom: 30px;
+  margin-right: 80px;
 }
 
 /* NAV AND FILTER*/
-
+nav {
+  margin-bottom: 50px;
+}
 .search-iput {
   background-color: #e7e7e7;
 }
@@ -87,10 +93,10 @@ h1 {
   color: #fff;
 }
 
-.arrow-filter:active {
+/* #ingredients-input:focus {
   transform: rotate(0.5turn);
   transition: 0.2s;
-}
+} */
 
 .dropdown-liste {
   display: grid;
@@ -101,7 +107,14 @@ h1 {
   color: #fff;
 }
 
-.ing-liste {
+.liste-ing {
+  display: none;
+}
+.liste-appareils {
+  display: none;
+}
+.liste-ustensils {
+  display: none;
 }
 
 /* MAIN  AND RECIPE CARD*/

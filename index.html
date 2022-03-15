@@ -41,7 +41,7 @@
       <div class="card-search"></div>
 
       <div class="filter">
-        <div class="input-group lg">
+        <div class="input-group lg" grid-area="header">
           <input
             type="text"
             id="ingredients-input"
@@ -50,11 +50,13 @@
             aria-label="Username"
             aria-describedby="basic-addon1"
           />
-          <i class="fa-solid fa-angle-up arrow-filter"></i>
+          <i
+            class="fa-solid fa-angle-up arrow-filter"
+            id="arrow-filter-ing"
+          ></i>
         </div>
-        <div id="display-ing"></div>
 
-        <div class="input-group lg">
+        <div class="input-group lg" grid-area="header">
           <input
             type="text"
             id="appareils-input"
@@ -66,7 +68,7 @@
           <i class="fa-solid fa-angle-up arrow-filter"></i>
         </div>
 
-        <div class="input-group lg">
+        <div class="input-group lg" grid-area="header">
           <input
             type="text"
             id="ustensils-input"
@@ -77,6 +79,17 @@
           />
           <i class="fa-solid fa-angle-up arrow-filter"></i>
         </div>
+        <div class="liste-ing" id="display-ing" grid-area="body"></div>
+        <div
+          class="liste-appareils"
+          id="display-appareils"
+          grid-area="body"
+        ></div>
+        <div
+          class="liste-ustensils"
+          id="display-ustensils"
+          grid-area="body"
+        ></div>
       </div>
     </nav>
 

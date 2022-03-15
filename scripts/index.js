@@ -19,7 +19,7 @@ function Data() {
 
 Data();
 
-async function recipesCard() {
+async function displayRecipesCard() {
   for (let i = 0; i < recipes.length; i++) {
     //console.log(recipes[i]);
     const card = `<div class="col">
@@ -51,37 +51,90 @@ async function recipesCard() {
     }
   }
 }
-recipesCard();
 
-function filterBy() {
+displayRecipesCard();
+
+function filterByIng() {
   const cardSearch = document.getElementsByClassName("card-search");
   const displayIng = document.getElementById("display-ing");
   console.log(displayIng);
-  const liste = document.createElement("ul");
+  let liste = document.createElement("ul");
   liste.classList.add("dropdown-liste");
 
   displayIng.appendChild(liste);
 
-  const ingredientInput = document.getElementById("ingredients-input").value;
-  const appareilsInput = document.getElementById("appareils-input").value;
+  const ingredientInput = document.getElementById("ingredients-input");
+
+  ingredientInput.addEventListener("focus", function () {
+    let arrow = document.getElementById("arrow-filter-ing");
+    displayIng.style.display = "block";
+    for (let i = 0; i < recipes.length; i++) {
+      for (let index = 0; index < recipes[i].ingredients.length; index++) {
+        const ing = recipes[i].ingredients[index].ingredient;
+        const ingredientsDropDown = `
+         <li class="ing-liste">${ing}</li>
+         `;
+        liste.innerHTML += ingredientsDropDown;
+        //console.log(ingredientsDropDown);
+      }
+    }
+  });
+  ingredientInput.addEventListener("blur", function () {
+    displayIng.style.display = "none";
+  });
+}
+
+function filterByAppareils() {
+  const cardSearch = document.getElementsByClassName("card-search");
+  const displayAppareils = document.getElementById("display-appareils");
+  let liste = document.createElement("ul");
+  liste.classList.add("dropdown-liste");
+
+  displayAppareils.appendChild(liste);
+
+  const appareilsInput = document.getElementById("appareils-input");
+
+  appareilsInput.addEventListener("focus", function () {
+    displayAppareils.style.display = "block";
+
+    for (let i = 0; i < recipes.length; i++) {
+      for (let index = 0; index < recipes[i].ingredients.length; index++) {
+        const appliance = recipes[i].appliance;
+        console.log(appliance);
+        const applianceDropDown = `
+         <li class="ing-liste">${appliance}</li>
+         `;
+        liste.innerHTML += applianceDropDown;
+      }
+    }
+  });
+  appareilsInput.addEventListener("blur", function () {
+    displayAppareils.style.display = "none";
+  });
+}
+
+function filterByUstensils() {
+  const cardSearch = document.getElementsByClassName("card-search");
+  const displayUstensils = document.getElementById("display-ustensils");
+  const liste = document.createElement("ul");
+  liste.classList.add("dropdown-liste");
+
+  displayUstensils.appendChild(liste);
+
   const ustensilsInput = document.getElementById("ustensils-input").value;
 
-  let test3 = [];
-  console.log(test3);
   for (let i = 0; i < recipes.length; i++) {
     for (let index = 0; index < recipes[i].ingredients.length; index++) {
-      const ing = recipes[i].ingredients[index].ingredient;
-      let test7 = [].push(ing);
-      console.log(test7);
-      const test = new Set(ing);
-
-      const ingredientsDropDown = `
-       <li class="ing-liste">${test2}</li>
+      const ustensils = recipes[i].ustensils;
+      console.log(ustensils);
+      const ustensilsDropDown = `
+       <li class="ing-liste">${ustensils}</li>
        `;
-      liste.innerHTML += ingredientsDropDown;
-      //console.log(new Set(ing));
+      //liste.innerHTML += ingredientsDropDown;
     }
   }
 }
 
-filterBy();
+filterByIng();
+filterByAppareils();
+filterByUstensils();
